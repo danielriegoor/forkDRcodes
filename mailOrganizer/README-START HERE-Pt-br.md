@@ -1,6 +1,6 @@
 # forkDRcodes - mailOrganizer
 
-   Vamos começar! 
+Vamos começar! 
 
    Neste README, você aprenderá a instalar o VSCode já com as dependências completas, (Node.JS e Python).
    Existem diversas outras ferramentas para codar - como o O Sublime Text 
@@ -10,7 +10,7 @@
    Neste tutorial, focarei apenas no VScode (que é o de minha preferência)
 
 
-   Então... Bora lá?
+Então... Bora lá?
 
    ** Caso você já tenha seu editor de código de preferência instalado, Node.JS mas não o Python.
    pule para o ## README-PythonInst
@@ -31,5 +31,6 @@
    Desta maneira, você garantirá também a instalação de dependências necessárias a configuração
    do seu ambiente de DEV.
 
-
+   Caso você opte por seguir essa instrução de instalar toda as dependências (recomendável, pois facilita o resultado #WorkSmart),
+   pode pular para o README relativo a plataforma que você utilza (## README-GoogleTakeout ou ## README-MS-Outlook).
   
