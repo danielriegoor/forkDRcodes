@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mailORganizer - Extrator MBOX GoogleTakeout</title>
+
+    <!-- SEO e Open Graph Tags -->
+    <meta name="description" content="Uma ferramenta web gratuita para extrair domínios de e-mail únicos de arquivos .mbox de forma rápida e segura, diretamente no seu navegador.">
+    <meta property="og:title" content="Extrator de Domínios Mbox">
+    <meta property="og:description" content="Extraia domínios de e-mail únicos de arquivos .mbox de forma rápida e segura.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seu-usuario.github.io/seu-repositorio/">
+    <meta property="og:image" content="https://placehold.co/1200x630/7c3aed/ffffff?text=Extrator+de+Domínios">
+    <meta property="profile:first_name" content="Daniel">
+    <meta property="profile:last_name" content="Riêgo">
+    <meta property="profile:username" content="danielriegoor">
+    <meta property="og:see_also" content="https://www.linkedin.com/in/danielriegoor/">
+    <meta property="og:see_also" content="https://www.linkedin.com/in/tiagoriegodr/">
+
+    <!-- Tailwind CSS para um design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter para uma tipografia limpa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Estilo base para usar a fonte Inter */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Animação simples para o spinner */
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .spinner {
+        animation: spin 1s linear infinite;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="w-full max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 md:p-8 space-y-6"
+    >
+      <!-- Cabeçalho da Aplicação -->
+      <div class="text-center">
+        <h1
+          class="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400"
+        >
+          mailORganizer - Extrator MBOX GoogleTakeout
+        </h1>
+        <p class="text-gray-600 dark:text-gray-400 mt-2">
+          Envie seu arquivo `.mbox` para extrair todos os domínios de e-mail
+          únicos.
+        </p>
+      </div>
+
+      <!-- Área de Upload de Arquivo -->
+      <div>
+        <label
+          for="mboxFile"
+          class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >Selecione o arquivo .mbox:</label
+        >
+        <div
+          class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 dark:border-gray-600 border-dashed rounded-md"
+        >
+          <div class="space-y-1 text-center">
+            <svg
+              class="mx-auto h-12 w-12 text-gray-400"
+              stroke="currentColor"
+              fill="none"
+              viewBox="0 0 48 48"
+              aria-hidden="true"
+            >
+              <path
+                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="flex text-sm text-gray-600 dark:text-gray-400">
+              <label
+                for="mboxFile"
+                class="relative cursor-pointer bg-white dark:bg-gray-800 rounded-md font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+              >
+                <span>Carregar um arquivo</span>
+                <input
+                  id="mboxFile"
+                  name="mboxFile"
+                  type="file"
+                  class="sr-only"
+                  accept=".mbox, text/plain"
+                />
+              </label>
+              <p class="pl-1">ou arraste e solte</p>
+            </div>
+            <p id="fileName" class="text-xs text-gray-500 dark:text-gray-400">
+              Apenas arquivos .mbox
+            </p>
+          </div>
+        </div>
+      </div>
+    <footer class="text-center py-4 mt-4">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+            Powered By 
+            <a href="https://www.linkedin.com/in/danielriegoor/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Daniel Riêgo LinkedIn Profiles" class="font-sans font-bold italic text-indigo-600 dark:text-indigo-400 hover:underline">Daniel Riêgo</a> 
+            &amp; 
+            <a href="https://www.linkedin.com/in/tiagoriegodr/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="Tiago Riêgo LinkedIn Profiles" class="font-sans font-bold italic text-indigo-600 dark:text-indigo-400 hover:underline">Tiago Riêgo</a> 
+            (GeminiPRO 2.5 | #WorkSmart)
+        </p>
+    </footer>
+
+      <!-- Seção de Feedback e Resultados -->
+      <div id="feedback" class="space-y-4">
+        <!-- Spinner de Carregamento -->
+        <div
+          id="loadingSpinner"
+          class="hidden flex items-center justify-center space-x-2 text-gray-500"
+        >
+          <div
+            class="spinner w-6 h-6 border-4 border-t-indigo-500 border-gray-200 rounded-full"
+          ></div>
+          <span>Processando o arquivo... Isso pode levar alguns minutos.</span>
+        </div>
+
+        <!-- Mensagem de Erro -->
+        <div
+          id="errorMessage"
+          class="hidden p-4 bg-red-100 dark:bg-red-900/20 border border-red-400 dark:border-red-600 text-red-700 dark:text-red-300 rounded-lg"
+        ></div>
+
+        <!-- Container de Resultados -->
+        <div id="resultsContainer" class="hidden space-y-4">
+          <div class="flex justify-between items-center">
+            <h2 class="text-xl font-semibold">Resultados</h2>
+            <span
+              id="domainCount"
+              class="px-3 py-1 text-sm font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 rounded-full"
+            ></span>
+          </div>
+
+          <!-- Lista de Domínios -->
+          <div
+            class="w-full bg-gray-50 dark:bg-gray-900 rounded-md border border-gray-200 dark:border-gray-700 max-h-64 overflow-y-auto"
+          >
+            <pre
+              id="domainList"
+              class="p-4 text-sm whitespace-pre-wrap break-words"
+            ></pre>
+          </div>
+
+          <!-- NOVO: Campo para nome do arquivo -->
+          <div>
+            <label
+              for="outputFileName"
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+              >Nome do arquivo para download:</label
+            >
+            <input
+              type="text"
+              id="outputFileName"
+              value="dominios_extraidos.txt"
+              class="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            />
+          </div>
+
+          <!-- Botões de Ação -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button
+              id="copyButton"
+              class="w-full flex-1 inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:ring-offset-gray-800"
+            >
+              Copiar para Área de Transferência
+            </button>
+            <button
+              id="downloadButton"
+              class="w-full flex-1 inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md shadow-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:ring-offset-gray-800"
+            >
+              Baixar como .txt
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // --- Seleção dos Elementos do DOM ----
+      const fileInput = document.getElementById("mboxFile");
+      const fileNameDisplay = document.getElementById("fileName");
+      const loadingSpinner = document.getElementById("loadingSpinner");
+      const resultsContainer = document.getElementById("resultsContainer");
+      const domainCount = document.getElementById("domainCount");
+      const domainList = document.getElementById("domainList");
+      const copyButton = document.getElementById("copyButton");
+      const downloadButton = document.getElementById("downloadButton");
+      const errorMessage = document.getElementById("errorMessage");
+      const outputFileNameInput = document.getElementById("outputFileName"); // NOVO
+
+      // --- Lógica Principal ---
+
+      /**
+       * Lida com a seleção de um arquivo pelo usuário.
+       * @param {Event} event - O evento de mudança do input de arquivo.
+       */
+      function handleFileSelect(event) {
+        const file = event.target.files[0];
+        if (!file) {
+          return;
+        }
+
+        // Reseta a UI para um novo processamento
+        resetUI();
+
+        fileNameDisplay.textContent = file.name;
+        loadingSpinner.classList.remove("hidden");
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          try {
+            const content = e.target.result;
+            setTimeout(() => {
+              processMboxContent(content);
+            }, 50);
+          } catch (error) {
+            showError(
+              `Ocorreu um erro ao processar o arquivo: ${error.message}`
+            );
+          }
+        };
+
+        reader.onerror = function () {
+          showError(
+            "Não foi possível ler o arquivo. Verifique se ele não está corrompido."
+          );
+        };
+
+        reader.readAsText(file, "utf-8");
+      }
+
+      /**
+       * Extrai domínios únicos do conteúdo de um arquivo mbox.
+       * @param {string} content - O conteúdo de texto do arquivo mbox.
+       */
+      function processMboxContent(content) {
+        console.log("Iniciando processamento...");
+        const emailRegex = /[a-zA-Z0-9._%+-]+@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+        const uniqueDomains = new Set();
+        const matches = content.matchAll(emailRegex);
+
+        for (const match of matches) {
+          uniqueDomains.add(match[1].toLowerCase());
+        }
+
+        console.log(
+          `Processamento concluído. ${uniqueDomains.size} domínios únicos encontrados.`
+        );
+        loadingSpinner.classList.add("hidden");
+        displayResults(uniqueDomains);
+      }
+
+      /**
+       * Exibe os resultados na interface do usuário.
+       * @param {Set<string>} domains - Um conjunto de domínios únicos.
+       */
+      function displayResults(domains) {
+        if (domains.size === 0) {
+          showError("Nenhum domínio foi encontrado no arquivo.");
+          return;
+        }
+
+        const sortedDomains = [...domains].sort();
+
+        domainCount.textContent = `${sortedDomains.length} domínios encontrados`;
+        domainList.textContent = sortedDomains.join("\n");
+        resultsContainer.classList.remove("hidden");
+      }
+
+      /**
+       * Copia a lista de domínios para a área de transferência.
+       */
+      function copyResults() {
+        navigator.clipboard
+          .writeText(domainList.textContent)
+          .then(() => {
+            const originalText = copyButton.textContent;
+            copyButton.textContent = "Copiado!";
+            setTimeout(() => {
+              copyButton.textContent = originalText;
+            }, 2000);
+          })
+          .catch((err) => {
+            showError("Falha ao copiar: " + err);
+          });
+      }
+
+      /**
+       * Inicia o download da lista de domínios como um arquivo .txt com nome customizado.
+       */
+      function downloadResults() {
+        // Pega o nome do arquivo do campo de input
+        let filename = outputFileNameInput.value.trim();
+        if (!filename) {
+          filename = "dominios_extraidos.txt"; // Nome padrão caso o campo esteja vazio
+        }
+        // Garante que o arquivo termine com .txt
+        if (!filename.toLowerCase().endsWith(".txt")) {
+          filename += ".txt";
+        }
+
+        const text = domainList.textContent;
+        const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename; // Usa o nome de arquivo customizado
+        document.body.appendChild(a);
+        a.click();
+
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+
+      /**
+       * Exibe uma mensagem de erro na UI.
+       * @param {string} message - A mensagem de erro a ser exibida.
+       */
+      function showError(message) {
+        loadingSpinner.classList.add("hidden");
+        errorMessage.textContent = message;
+        errorMessage.classList.remove("hidden");
+      }
+
+      /**
+       * Reseta a UI para o estado inicial.
+       */
+      function resetUI() {
+        loadingSpinner.classList.add("hidden");
+        resultsContainer.classList.add("hidden");
+        errorMessage.classList.add("hidden");
+        fileNameDisplay.textContent = "Apenas arquivos .mbox";
+        domainList.textContent = "";
+        domainCount.textContent = "";
+        outputFileNameInput.value = "dominios_extraidos.txt"; // Reseta o nome do arquivo
+      }
+
+      // --- Adição dos Event Listeners ---
+      fileInput.addEventListener("change", handleFileSelect);
+      copyButton.addEventListener("click", copyResults);
+      downloadButton.addEventListener("click", downloadResults);
+    </script>
+  </body>
+</html>
