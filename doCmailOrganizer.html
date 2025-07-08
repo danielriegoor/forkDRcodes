@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html
+  lang="pt-BR"
+  class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título da Página -->
+    <title>
+      Documentação mailOrganizer -
+      Powered By Daniel Riêgo e Tiago
+      Riego
+    </title>
+
+    <!-- Metadados Essenciais -->
+    <meta
+      name="description"
+      content="Documentação oficial do projeto mailOrganizer, uma ferramenta para organizar e gerenciar seus e-mails de forma eficiente. Desenvolvido por Daniel Riêgo e Tiago Riego." />
+    <meta
+      name="keywords"
+      content="mailOrganizer, documentação, Daniel Riego, Tiago Riego, email, organização, API, tutorial, mbox" />
+    <meta
+      name="author"
+      content="Daniel Riego, Tiago Riego" />
+    <link
+      rel="canonical"
+      href="https://danielriegoor.github.io/mailOrganizer-docs/" />
+
+    <!-- Open Graph (OG) para Redes Sociais -->
+    <meta
+      property="og:title"
+      content="Documentação mailOrganizer - Powered By Daniel Riêgo e Tiago Riego" />
+    <meta
+      property="og:description"
+      content="Explore a documentação completa do mailOrganizer para aprender a usar, configurar e integrar a ferramenta." />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/danielriegoor/DR-Portifolio/main/assets/og-image-mailorganizer.png" />
+    <meta
+      property="og:url"
+      content="https://danielriegoor.github.io/mailOrganizer-docs/" />
+    <meta
+      property="og:type"
+      content="website" />
+    <meta
+      property="og:locale"
+      content="pt_BR" />
+    <meta
+      property="og:site_name"
+      content="mailOrganizer Docs" />
+
+    <!-- Metadados para os perfis mencionados -->
+    <meta
+      property="og:see_also"
+      content="https://danielriegoor.github.io/DR-Portifolio/" />
+    <meta
+      property="og:see_also"
+      content="https://www.linkedin.com/in/danielriegoor/" />
+    <meta
+      property="og:see_also"
+      content="https://www.linkedin.com/in/tiagoriegoDR/" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/danielriegoor/DR-Portifolio/main/assets/favicon.ico"
+      type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Estilos CSS -->
+    <link
+      rel="stylesheet"
+      href="./style.css" />
+  </head>
+  <body class="antialiased">
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <aside
+        id="sidebar"
+        class="fixed inset-y-0 left-0 bg-sidebar-bg w-72 border-r border-border-color p-6 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 ease-in-out z-30">
+        <div
+          class="flex items-center justify-between mb-8">
+          <a
+            href="#"
+            class="flex items-center space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-accent-color">
+              <path
+                d="M4 7V4a2 2 0 0 1 2-2h8.5L20 7.5V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1" />
+              <polyline
+                points="14 2 14 8 20 8" />
+              <path
+                d="M20.25 15.25a2.5 2.5 0 0 0-3.5-3.5L15.5 13l-1.5-1.5 1.25-1.25a2.5 2.5 0 0 0-3.5-3.5L10 8.5V13l.5 2 2 2 .5 3.5 3-1 2-2 3.5-1.5Z" />
+            </svg>
+            <span
+              class="text-xl font-bold text-white"
+              >mailOrganizer</span
+            >
+          </a>
+        </div>
+
+        <!-- Language Switcher -->
+        <div class="mb-6">
+          <div
+            class="flex border border-border-color rounded-lg p-1 bg-sky-200">
+            <button
+              id="lang-pt"
+              class="w-1/2 text-sm py-1.5 rounded-md transition-colors duration-200">
+              Português
+            </button>
+            <button
+              id="lang-en"
+              class="w-1/2 text-sm py-1.5 rounded-md transition-colors duration-200">
+              English
+            </button>
+          </div>
+        </div>
+
+        <nav
+          id="nav-menu"
+          class="space-y-6"></nav>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col">
+        <!-- Header -->
+        <header
+          class="sticky top-0 bg-bg-color/80 backdrop-blur-sm z-20">
+          <div
+            class="flex items-center justify-between h-16 px-4 md:px-8 border-b border-border-color">
+            <button
+              id="menu-toggle"
+              class="md:hidden text-slate-400 hover:text-white">
+              <i
+                data-lucide="menu"
+                class="w-6 h-6"></i>
+            </button>
+            <div
+              class="hidden md:block">
+              <h1
+                id="header-title"
+                class="text-lg font-semibold text-white"></h1>
+            </div>
+            <a
+              href="https://github.com/danielriegoor/mailOrganizer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-400 hover:text-white transition-colors">
+              <i
+                data-lucide="github"
+                class="w-6 h-6"></i>
+            </a>
+          </div>
+        </header>
+
+        <main
+          id="main-content"
+          class="flex-1 p-4 md:p-8 lg:p-12">
+          <!-- O conteúdo é injetado aqui pelo main.js -->
+        </main>
+
+        <!-- Footer -->
+        <footer
+          class="p-8 border-t border-border-color text-center text-sm">
+          <p id="footer-powered-by"></p>
+          <div
+            class="flex justify-center items-center space-x-4 mt-2">
+            <a
+              id="footer-daniel"
+              href="https://www.linkedin.com/in/danielriegoor/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil do dev do projeto mailOrganizer"
+              class="hover:text-accent-color transition-colors"
+              >Daniel Riego</a
+            >
+            <span>&</span>
+            <a
+              id="footer-tiago"
+              href="https://www.linkedin.com/in/tiagoriegoDR/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil do dev do projeto mailOrganizer"
+              class="hover:text-accent-color transition-colors"
+              >Tiago Riego</a
+            >
+          </div>
+          <p class="mt-4">
+            <a
+              id="footer-portfolio"
+              href="https://danielriegoor.github.io/DR-Portifolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-accent-color transition-colors"></a>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- O script principal que controla a página -->
+    <script
+      src="./main.js"
+      type="module"></script>
+  </body>
+</html>

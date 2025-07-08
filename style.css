@@ -1,0 +1,133 @@
+/* ============================================================================
+  ARQUIVO DE ESTILOS PRINCIPAL PARA A DOCUMENTAÇÃO DO MAILORGANIZER
+  ============================================================================
+*/
+
+/* -- Variáveis de Cores (Tema Claro) --
+  Define a paleta de cores central para facilitar a manutenção do tema.
+*/
+:root {
+  --bg-color: #ffffff; /* Cor de fundo principal (white) */
+  --sidebar-bg: #f8fafc; /* Cor de fundo da barra lateral (slate-50) */
+  --border-color: #e2e8f0; /* Cor das bordas (slate-200) */
+  --text-primary: #1e293b; /* Cor do texto principal, como títulos (slate-800) */
+  --text-secondary: #1368e9ad; /* Cor do texto secundário, como parágrafos (slate-600) */
+  --accent-color: #0ea5e9; /* Cor de destaque para links e elementos ativos (sky-500) */
+  --code-bg: #f1f5f9; /* Fundo para blocos de código inline (slate-100) */
+}
+
+/* -- Estilos Globais e Tipografia --
+  Configurações base para o corpo do documento e fontes.
+*/
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* -- Estilização de Código --
+  Estilos para blocos de código, tanto inline quanto em blocos <pre>.
+*/
+code {
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  color: #cb2f8c; /* Cor rosa para código, para contraste */
+}
+
+pre {
+  background-color: var(--code-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1em;
+  color: #334155; /* slate-700 */
+}
+
+/* -- Estilos para o Conteúdo Principal (Prose) --
+  Melhora a legibilidade do conteúdo gerado dinamicamente.
+*/
+.prose {
+  color: var(--text-secondary);
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  color: var(--text-primary);
+}
+
+.prose a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+  color: #0284c7; /* sky-600 */
+}
+
+.prose ol,
+.prose ul {
+  line-height: 1.75;
+}
+
+.prose li > p {
+  margin: 0;
+}
+
+/* -- Estilos da Barra Lateral (Sidebar) --
+*/
+.sidebar-link.active {
+  color: var(--accent-color);
+  font-weight: 600;
+  background-color: rgba(
+    105,
+    211,
+    114,
+    0.973
+  ); /* Fundo sutil para o link ativo */
+}
+
+/* -- Container de Vídeo Responsivo --
+  Garante que o vídeo do YouTube se ajuste corretamente ao layout.
+*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #e2e8f0; /* slate-200 */
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

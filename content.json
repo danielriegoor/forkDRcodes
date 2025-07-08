@@ -1,0 +1,116 @@
+{
+  "pt-br": {
+    "nav": [
+      {
+        "category": "Introdução",
+        "items": [
+          {
+            "title": "Visão Geral",
+            "id": "visao-geral"
+          },
+          {
+            "title": "Exportando MBOX",
+            "id": "exportando-mbox"
+          }
+        ]
+      },
+      {
+        "category": "Guias",
+        "items": [
+          {
+            "title": "Extraindo Domínios",
+            "id": "extraindo-dominios"
+          }
+        ]
+      },
+      {
+        "category": "API",
+        "items": [
+          {
+            "title": "Endpoints",
+            "id": "api-endpoints"
+          }
+        ]
+      }
+    ],
+    "pages": {
+      "visao-geral": {
+        "title": "Visão Geral do mailOrganizer",
+        "content": "<p class=\"text-lg mb-4\">Bem-vindo à documentação do <strong>mailOrganizer</strong>. Esta ferramenta foi projetada para simplificar a maneira como você gerencia suas caixas de entrada de e-mail, automatizando tarefas repetitivas e organizando suas mensagens de forma inteligente.</p><p>Seja você um desenvolvedor integrando nossa API ou um usuário final buscando mais produtividade, esta documentação fornecerá tudo o que você precisa para começar.</p>"
+      },
+      "exportando-mbox": {
+        "title": "Pré-requisito: Exportando E-mails com Google Takeout",
+        "content": "<h2>Exportando Dados do Google Takeout para Extrair Domínios</h2><p class='mb-4'>Antes de usar a ferramenta de extração, você precisa de um arquivo com seus e-mails. O Google Takeout permite que você baixe seus dados no formato <strong>.mbox</strong>, que é exatamente o que precisamos.</p><p class='mb-4'>Este processo é uma opção para usuários avançados e geralmente não é a maneira mais simples de identificar domínios para filtros, pois envolve manipulação de dados. No entanto, se você tem muitos e-mails e quer uma análise mais profunda, pode ser útil.</p><h3 class='text-xl font-bold mt-6 mb-3'>Como Exportar seus E-mails</h3><ol class='list-decimal list-inside space-y-3'><li><strong>Acesse o Google Takeout:</strong> Vá para <a href='https://takeout.google.com' target='_blank' rel='noopener noreferrer'>takeout.google.com</a> e faça login na sua conta. É uma ferramenta oficial e segura do Google.</li><li><strong>Selecione os Dados para Exportar:</strong><ul><li class='ml-4 mt-2'>Clique em <strong>\"Desmarcar tudo\"</strong>.</li><li class='ml-4'>Role para baixo e selecione apenas <strong>\"Mail\" (E-mail)</strong>. Certifique-se de que a opção de incluir todos os dados do Mail esteja selecionada.</li></ul></li><li><strong>Escolha o Tipo de Arquivo, Frequência e Destino:</strong><ul><li class='ml-4 mt-2'><strong>Tipo de arquivo:</strong> <code>.zip</code> é o mais comum.</li><li class='ml-4'><strong>Tamanho do arquivo:</strong> Escolha um tamanho que seja gerenciável (ex: 2 GB ou 4 GB). Seus e-mails podem ser divididos em vários arquivos.</li><li class='ml-4'><strong>Frequência:</strong> \"Exportar uma vez\" é suficiente para essa finalidade.</li><li class='ml-4'><strong>Método de entrega:</strong> Escolha como você quer receber o link para download (ex: \"Enviar link para download por e-mail\").</li></ul></li><li><strong>Criar Exportação:</strong> Clique em <strong>\"Criar exportação\"</strong>.</li></ol><p class='mt-4'>O Google levará um tempo (horas ou até dias, dependendo do volume) para processar a solicitação e enviará um e-mail com o link para baixar seus dados. O resultado será um arquivo <code>.zip</code> contendo seu arquivo <code>.mbox</code>.</p><div class='mt-6 p-4 border-l-4 border-sky-400 bg-slate-800 rounded-r-lg'><p><strong class='text-white'>Próximo passo:</strong> Com o arquivo <code>.mbox</code> em mãos, siga para o guia de <a href='#extraindo-dominios'>Extraindo Domínios</a>.</p></div>"
+      },
+      "extraindo-dominios": {
+        "title": "Guia: Usando o Extrator de Domínios",
+        "content": "<p class='mb-4'>Com o seu arquivo <code>.mbox</code> exportado do Google Takeout, você pode usar a ferramenta online para extrair todos os domínios únicos dos remetentes de e-mail.</p><p class='mb-4'>Acesse a ferramenta aqui: <a href='https://danielriegoor.github.io/forkDRcodes/mailOrganizer/' target='_blank' rel='noopener noreferrer'>Extrator de Domínios mailOrganizer</a>.</p><h3 class='text-xl font-bold mt-6 mb-3'>Passo a Passo</h3><ol class='list-decimal list-inside space-y-3'><li><strong>Carregue o Arquivo:</strong> Clique no botão <strong>\"Escolha o arquivo .mbox\"</strong> e selecione o arquivo <code>.mbox</code> que você baixou do Google Takeout (lembre-se de descompactar o arquivo <code>.zip</code> primeiro).</li><li><strong>Execute a Extração:</strong> Após selecionar o arquivo, clique no botão <strong>\"Extrair Domínios\"</strong>. A ferramenta irá ler o arquivo e processar todos os e-mails.</li><li><strong>Visualize os Resultados:</strong> Em alguns segundos, a caixa de texto abaixo será preenchida com uma lista de todos os domínios únicos encontrados (ex: <code>google.com</code>, <code>microsoft.com</code>, <code>linkedin.com</code>), um por linha.</li><li><strong>Copie a Lista:</strong> Clique no botão <strong>\"Copiar Domínios\"</strong> para copiar a lista completa para a sua área de transferência. Agora você pode colar essa lista em um filtro de e-mail, planilha ou onde mais precisar.</li></ol>"
+      },
+      "api-endpoints": {
+        "title": "Endpoints Principais",
+        "content": "<p>Aqui estão alguns dos endpoints mais comuns da nossa API:</p><ul class=\"list-disc list-inside space-y-2 mt-4\"><li><code>GET /api/v1/emails</code> - Lista os e-mails de uma conta.</li><li><code>POST /api/v1/rules</code> - Cria uma nova regra de organização.</li><li><code>GET /api/v1/rules/{id}</code> - Obtém detalhes de uma regra específica.</li></ul>"
+      }
+    },
+    "footer": {
+      "poweredBy": "Desenvolvido com ❤️ por",
+      "portfolio": "Portfólio de Daniel Riego"
+    }
+  },
+  "en-us": {
+    "nav": [
+      {
+        "category": "Introduction",
+        "items": [
+          {
+            "title": "Overview",
+            "id": "visao-geral"
+          },
+          {
+            "title": "Exporting MBOX",
+            "id": "exportando-mbox"
+          }
+        ]
+      },
+      {
+        "category": "Guides",
+        "items": [
+          {
+            "title": "Extracting Domains",
+            "id": "extraindo-dominios"
+          }
+        ]
+      },
+      {
+        "category": "API",
+        "items": [
+          {
+            "title": "Endpoints",
+            "id": "api-endpoints"
+          }
+        ]
+      }
+    ],
+    "pages": {
+      "visao-geral": {
+        "title": "mailOrganizer Overview",
+        "content": "<p class=\"text-lg mb-4\">Welcome to the <strong>mailOrganizer</strong> documentation. This tool is designed to simplify how you manage your email inboxes by automating repetitive tasks and intelligently organizing your messages.</p><p>Whether you are a developer integrating our API or an end-user seeking more productivity, this documentation will provide everything you need to get started.</p>"
+      },
+      "exportando-mbox": {
+        "title": "Prerequisite: Exporting Emails with Google Takeout",
+        "content": "<h2>Exporting Google Takeout Data to Extract Domains</h2><p class='mb-4'>Before using the extraction tool, you need a file with your emails. Google Takeout allows you to download your data in the <strong>.mbox</strong> format, which is exactly what we need.</p><p class='mb-4'>This process is an option for advanced users and is generally not the simplest way to identify domains for filters, as it involves data manipulation. However, if you have many emails and want a deeper analysis, it can be useful.</p><h3 class='text-xl font-bold mt-6 mb-3'>How to Export Your Emails</h3><ol class='list-decimal list-inside space-y-3'><li><strong>Access Google Takeout:</strong> Go to <a href='https://takeout.google.com' target='_blank' rel='noopener noreferrer'>takeout.google.com</a> and log into your account. It is an official and secure Google tool.</li><li><strong>Select Data to Export:</strong><ul><li class='ml-4 mt-2'>Click <strong>\"Deselect all\"</strong>.</li><li class='ml-4'>Scroll down and select only <strong>\"Mail\"</strong>. Ensure the option to include all Mail data is selected.</li></ul></li><li><strong>Choose File Type, Frequency & Destination:</strong><ul><li class='ml-4 mt-2'><strong>File type:</strong> <code>.zip</code> is the most common.</li><li class='ml-4'><strong>File size:</strong> Choose a manageable size (e.g., 2 GB or 4 GB). Your emails might be split into multiple files.</li><li class='ml-4'><strong>Frequency:</strong> \"Export once\" is sufficient for this purpose.</li><li class='ml-4'><strong>Delivery method:</strong> Choose how you want to receive the download link (e.g., \"Send download link via email\").</li></ul></li><li><strong>Create Export:</strong> Click <strong>\"Create export\"</strong>.</li></ol><p class='mt-4'>Google will take some time (hours or even days, depending on the volume) to process the request and will send you an email with the link to download your data. The result will be a <code>.zip</code> file containing your <code>.mbox</code> file.</p><div class='mt-6 p-4 border-l-4 border-sky-400 bg-slate-800 rounded-r-lg'><p><strong class='text-white'>Next step:</strong> With the <code>.mbox</code> file in hand, proceed to the <a href='#extraindo-dominios'>Extracting Domains</a> guide.</p></div>"
+      },
+      "extraindo-dominios": {
+        "title": "Guide: Using the Domain Extractor",
+        "content": "<p class='mb-4'>With your <code>.mbox</code> file exported from Google Takeout, you can use the online tool to extract all unique domains from the email senders.</p><p class='mb-4'>Access the tool here: <a href='https://danielriegoor.github.io/forkDRcodes/mailOrganizer/' target='_blank' rel='noopener noreferrer'>mailOrganizer Domain Extractor</a>.</p><h3 class='text-xl font-bold mt-6 mb-3'>Step-by-Step</h3><ol class='list-decimal list-inside space-y-3'><li><strong>Upload the File:</strong> Click the <strong>\"Choose the .mbox file\"</strong> button and select the <code>.mbox</code> file you downloaded from Google Takeout (remember to unzip the <code>.zip</code> file first).</li><li><strong>Run the Extraction:</strong> After selecting the file, click the <strong>\"Extract Domains\"</strong> button. The tool will read the file and process all the emails.</li><li><strong>View the Results:</strong> In a few seconds, the text box below will be populated with a list of all unique domains found (e.g., <code>google.com</code>, <code>microsoft.com</code>, <code>linkedin.com</code>), one per line.</li><li><strong>Copy the List:</strong> Click the <strong>\"Copy Domains\"</strong> button to copy the entire list to your clipboard. You can now paste this list into an email filter, spreadsheet, or wherever you need it.</li></ol>"
+      },
+      "api-endpoints": {
+        "title": "Main Endpoints",
+        "content": "<p>Here are some of the most common endpoints of our API:</p><ul class=\"list-disc list-inside space-y-2 mt-4\"><li><code>GET /api/v1/emails</code> - Lists emails from an account.</li><li><code>POST /api/v1/rules</code> - Creates a new organization rule.</li><li><code>GET /api/v1/rules/{id}</code> - Gets details of a specific rule.</li></ul>"
+      }
+    },
+    "footer": {
+      "poweredBy": "Developed with ❤️ by",
+      "portfolio": "Daniel Riego's Portfolio"
+    }
+  }
+}
