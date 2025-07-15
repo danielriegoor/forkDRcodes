@@ -9,7 +9,7 @@
 ⚙ A personal collection of tools in development.<br>
 ➧ Feel free to exploy it.
 <br><br><br>
-<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/2c16e080-b6e5-4814-9f4d-a67c78a92f7f" /> <br>
+<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/2c16e080-b6e5-4814-9f4d-a67c78a92f7f" /> ➨
 PT-🇧🇷<br>
 𐃘 <br>
 🛠 𝗺𝗮𝗶𝗹𝗢𝗥𝗴𝗮𝗻𝗶𝘇𝗲𝗿 - 𝗢𝗻𝗲𝗖𝗹𝗶𝗰𝗸𝗧𝗼𝗼𝗹 🖯<br>
@@ -19,7 +19,7 @@ da sua caixa de emails com configurações simples e autoexplicativas!
 🖺 𝘿𝙤𝙘𝙪𝙢𝙚𝙣𝙩𝙖𝙘̧𝙖̃𝙤: https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html<br>
 ➧ 𝘼𝙘𝙚𝙨𝙨𝙚: https://daniel.riegos.dev/forkDRcodes/mailOrganizer/
 <br><br><br>
-<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/7b950cd2-f938-48e1-970e-4e8b7f31001b" /> <br>
+<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/7b950cd2-f938-48e1-970e-4e8b7f31001b" /> ➨
  EN-🇺🇸<br>
  𐃘 <br>
 🛠 𝗺𝗮𝗶𝗹𝗢𝗥𝗴𝗮𝗻𝗶𝘇𝗲𝗿 - 𝗢𝗻𝗲𝗖𝗹𝗶𝗰𝗸𝗧𝗼𝗼𝗹 🖯<br>
