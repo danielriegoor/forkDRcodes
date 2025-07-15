@@ -1,12 +1,12 @@
 ⚝ Ｄａｎｉｅｌ Ｒｉêｇｏ － Ｆｕｌｌ Ｓｔａｃｋ Ｄｅｖ ⚝
 <br>
-➽ #𝐟𝐨𝐫𝐤𝐃𝐑𝐜𝐨𝐝𝐞𝐬
+⚙ #𝐟𝐨𝐫𝐤𝐃𝐑𝐜𝐨𝐝𝐞𝐬 ⚙ 
 𐃆
 <br><br>
-⚙ <img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/2c16e080-b6e5-4814-9f4d-a67c78a92f7f" /> Uma coleção pessoal de ferramentas em desenvolvimento. <br>
+<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/2c16e080-b6e5-4814-9f4d-a67c78a92f7f" /> Uma coleção pessoal de ferramentas em desenvolvimento. <br>
 ➧ Sinta-se a vontade para explorar.
 <br><br>
-⚙ <img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/7b950cd2-f938-48e1-970e-4e8b7f31001b" /> A personal collection of tools in development.<br>
+<img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/7b950cd2-f938-48e1-970e-4e8b7f31001b" /> A personal collection of tools in development.<br>
 ➧ Feel free to exploy it.
 <br><br><br>
 <img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/2c16e080-b6e5-4814-9f4d-a67c78a92f7f" /> ➨
