@@ -2,10 +2,10 @@
 <br>
 ➽ #𝐟𝐨𝐫𝐤𝐃𝐑𝐜𝐨𝐝𝐞𝐬
 𐃆
-<br><br>
+<br>
 ⚙ Uma coleção pessoal de ferramentas em desenvolvimento. <br>
 ➧ Sinta-se a vontade para explorar.
-<br><br>
+<br>
 ⚙ A personal collection of tools in development.<br>
 ➧ Feel free to exploy it.
 <br><br><br>
