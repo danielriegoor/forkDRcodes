@@ -9,7 +9,8 @@
 ⚙ A personal collection of tools in development.<br>
 ➧ Feel free to exploy it.
 <br><br><br>
-𐃘 <img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/2c16e080-b6e5-4814-9f4d-a67c78a92f7f" /> PT-🇧🇷<br>
+𐃘 <img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/2c16e080-b6e5-4814-9f4d-a67c78a92f7f" /> <br>
+PT-🇧🇷<br>
 🛠 𝗺𝗮𝗶𝗹𝗢𝗥𝗴𝗮𝗻𝗶𝘇𝗲𝗿 - 𝗢𝗻𝗲𝗖𝗹𝗶𝗰𝗸𝗧𝗼𝗼𝗹 🖯<br>
 ➨ Uma ferramenta simples desenvolvida com auxílio da IA para organizar a "maré conturbada"<br>
 da sua caixa de emails com configurações simples e autoexplicativas!
@@ -17,7 +18,8 @@ da sua caixa de emails com configurações simples e autoexplicativas!
 🖺 𝘿𝙤𝙘𝙪𝙢𝙚𝙣𝙩𝙖𝙘̧𝙖̃𝙤: https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html<br>
 ➧ 𝘼𝙘𝙚𝙨𝙨𝙚: https://daniel.riegos.dev/forkDRcodes/mailOrganizer/
 <br><br><br>
-𐃘 EN-🇺🇸<br>
+𐃘<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/7b950cd2-f938-48e1-970e-4e8b7f31001b" /> <br>
+ EN-🇺🇸<br>
 🛠 𝗺𝗮𝗶𝗹𝗢𝗥𝗴𝗮𝗻𝗶𝘇𝗲𝗿 - 𝗢𝗻𝗲𝗖𝗹𝗶𝗰𝗸𝗧𝗼𝗼𝗹 🖯<br>
 ➨ A simple AI-powered tool to organize the "troubled seas" of your inbox with simple, self-explanatory settings!<br>
 See the documentation in the project folder!
