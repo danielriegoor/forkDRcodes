@@ -16,7 +16,7 @@ PT-🇧🇷<br>
 da sua caixa de emails com configurações simples e autoexplicativas!
 <br><br>
 <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
-  <img src="https://img.shields.io/badge/🖺%20Documentação-3730a3?style=plastic" alt="Documentação"/>
+  <img src="https://img.shields.io/badge/🖺%20Documentação-215a22?style=plastic" alt="Documentação"/>
 </a> <br>
 <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
   <img src="https://img.shields.io/badge/➧%20Acesse-3730a3?style=plastic" alt="Acesse a ferramenta"/>
