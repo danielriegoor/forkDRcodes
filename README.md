@@ -18,7 +18,7 @@ da sua caixa de emails com configurações simples e autoexplicativas!
 <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
   <img src="https://img.shields.io/badge/🖺%20Documentação-215a22?style=plastic" alt="Leia a documentação."/>
 </a> <br>
-<a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
+<a href="https://daniel.riegos.dev/forkDRcodes/mailOrganizer/" target="_blank">
   <img src="https://img.shields.io/badge/➧%20Acesse-3730a3?style=plastic" alt="Acesse a ferramenta."/>
 </a>
 <br><br><br>
@@ -31,6 +31,6 @@ See the documentation in the project folder!
 <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
   <img src="https://img.shields.io/badge/🖺%20Documentation-215a22?style=plastic" alt="Read the documentation."/>
 </a> <br>
-<a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
+<a href="https://daniel.riegos.dev/forkDRcodes/mailOrganizer/" target="_blank">
   <img src="https://img.shields.io/badge/➧%20Access%20it-3730a3?style=plastic" alt="Acess the tool."/>
 </a>
