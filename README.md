@@ -16,10 +16,10 @@ PT-🇧🇷<br>
 da sua caixa de emails com configurações simples e autoexplicativas!
 <br><br>
 <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
-  <img src="https://img.shields.io/badge/🖺%20Documentação-215a22?style=plastic" alt="Documentação"/>
+  <img src="https://img.shields.io/badge/🖺%20Documentação-215a22?style=plastic" alt="Leia a documentação."/>
 </a> <br>
 <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
-  <img src="https://img.shields.io/badge/➧%20Acesse-3730a3?style=plastic" alt="Acesse a ferramenta"/>
+  <img src="https://img.shields.io/badge/➧%20Acesse-3730a3?style=plastic" alt="Acesse a ferramenta."/>
 </a>
 <br><br><br>
 <img width="15" height="15" alt="image" src="https://github.com/user-attachments/assets/7b950cd2-f938-48e1-970e-4e8b7f31001b" /> ➨
@@ -28,5 +28,9 @@ da sua caixa de emails com configurações simples e autoexplicativas!
 ➨ A simple AI-powered tool to organize the "troubled seas" of your inbox with simple, self-explanatory settings!<br>
 See the documentation in the project folder!
 <br><br>
-🖺 <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank" text="Documentation" arial-label="Read the documentation.">𝙃𝙤𝙬 𝙩𝙤 </a><br>
-➧ <a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank" text="Access" arial-label="Acess the tool.">𝘼𝙘𝙘𝙚𝙨𝙨 𝙞𝙩 </a>
+<a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
+  <img src="https://img.shields.io/badge/🖺%20Documentation-215a22?style=plastic" alt="Read the documentation."/>
+</a> <br>
+<a href="https://daniel.riegos.dev/forkDRcodes/doCmailOrganizer.html" target="_blank">
+  <img src="https://img.shields.io/badge/➧%20Access%20it-3730a3?style=plastic" alt="Acess the tool."/>
+</a>
